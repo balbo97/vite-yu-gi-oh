@@ -1,15 +1,22 @@
 <script>
+
+import AppCards from './AppCards.vue'
 export default {
+    name: 'AppMain',
+    components: {
+        AppCards
+
+    }
 
 }
 </script>
 
 <template lang="">
-    <div>
-        
-    </div>
+    <main>
+        <!-- SELECT BAR  -->
+        <!-- CARDS -->
+         <AppCards />
+    </main>
 </template>
 
-<style lang="">
-    
-</style>
+<style lang="scss" scoped></style>
