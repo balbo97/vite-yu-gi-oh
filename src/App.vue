@@ -1,13 +1,30 @@
-<template lang="">
-  <div>
-    
-  </div>
-</template>
 <script>
-export default {
+import { store } from './store'
 
+import AppHeader from './components/AppHeader.vue'
+import AppMain from './components/AppMain.vue'
+export default {
+  components: {
+
+    AppHeader,
+    AppMain
+
+  },
+  data() {
+    return {
+      store
+    }
+  },
 }
 </script>
-<style lang="">
-  
+
+<template lang="">
+  <div>
+    <AppHeader />
+    <AppMain />
+  </div>
+</template>
+
+<style lang="scss">
+@use ''
 </style>
