@@ -1,6 +1,6 @@
 <script>
 
-import axios from 'axios';
+
 import { store } from '../store'
 export default {
     name: 'AppCards',
@@ -9,27 +9,17 @@ export default {
             store
         }
     },
-    methods: {
-        getCards() {
-            axios.get(store.endpoint).then((response) => {
 
-                this.store.cardsList = response.data.data
-            })
-        }
-    },
-    created() {
-        this.getCards();
-    },
 }
 </script>
 r
 <template lang="">
     <div class="container">
         <div class="row">
-            <div class="card-count">{{store.lenght}}</div>
+            
             <div class="col-12 col-md-6 col-lg-3" v-for="(card, index) in store.cardsList" :key="index">
-                <div class="cards" v-for="(image, index) in card.card_images" :key="index">
-                    <img :src="image.image_url" alt="">
+                <div class="cards">
+                    <img :src="card.card_images[0].image_url" alt="">
                     <h5>{{card.name}}</h5>
                     <p>{{card.archetype}}</p>
                 </div>
