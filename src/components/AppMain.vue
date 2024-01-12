@@ -1,10 +1,13 @@
 <script>
 
 import AppCards from './AppCards.vue'
+import AppSelect from './AppSelect.vue';
+
 export default {
     name: 'AppMain',
     components: {
-        AppCards
+        AppCards,
+        AppSelect
 
     }
 
@@ -15,6 +18,7 @@ export default {
 <template lang="">
     <main>
         <!-- SELECT BAR  -->
+        <AppSelect />
         <!-- CARDS -->
          <AppCards />
     </main>
